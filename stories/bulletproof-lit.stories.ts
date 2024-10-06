@@ -16,7 +16,7 @@ interface Story<T> {
 }
 
 interface ArgTypes {
-  header?: string;
+  header: string;
   backgroundColor?: string;
 }
 

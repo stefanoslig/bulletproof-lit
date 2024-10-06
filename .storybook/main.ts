@@ -4,4 +4,5 @@ export default {
   core: {
     builder: '@storybook/builder-vite',
   },
+  framework: '@storybook/web-components-vite',
 };

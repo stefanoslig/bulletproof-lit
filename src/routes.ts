@@ -1,12 +1,12 @@
-// import { Route } from '@vaadin/router';
+import { Route } from '@vaadin/router';
 
-// export const routes: Route[] = [
-//   {
-//     path: '/',
-//     component: 'home-page',
-//     action: async () => {
-//       await import('./pages/home.js');
-//     },
-//   },
-//   { path: '(.*)', redirect: '/' },
-// ];
+export const routes: Route[] = [
+  {
+    path: '/',
+    component: 'landing-page',
+    action: async () => {
+      await import('./pages/landing-page.js');
+    },
+  },
+  { path: '(.*)', redirect: '/' },
+];

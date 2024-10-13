@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
@@ -18,10 +18,11 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "axios": "1.7.7",
-    "lit": "3.1.4",
     "@lit/task": "1.0.1",
-    "@vaadin/router": "1.7.5"
+    "@unocss/preset-icons": "^0.63.4",
+    "@vaadin/router": "1.7.5",
+    "axios": "1.7.7",
+    "lit": "3.1.4"
   },
   "devDependencies": {
     "@open-wc/eslint-config": "^12.0.3",
@@ -49,6 +50,7 @@
     "storybook": "8.3.5",
     "tslib": "^2.6.3",
     "typescript": "5.5.3",
+    "unocss": "^0.63.4",
     "vite": "5.4.8"
   },
   "eslintConfig": {

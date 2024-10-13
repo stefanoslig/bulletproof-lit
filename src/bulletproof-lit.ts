@@ -1,11 +1,20 @@
-import { LitElement, html, css } from 'lit';
-import { property, customElement } from 'lit/decorators.js';
-
-import logo from './assets/open-wc-logo.svg';
+import { css, html, LitElement } from 'lit';
+import { customElement, query } from 'lit/decorators.js';
+import { routes } from './routes.js';
+import { Router } from '@vaadin/router';
 
 @customElement('bulletproof-lit')
 export class BulletproofLit extends LitElement {
-  @property({ type: String }) header = 'My app';
+  @query('#outlet') private outlet!: HTMLElement;
+
+  firstUpdated() {
+    const router = new Router(this.outlet);
+    router.setRoutes(routes);
+  }
+
+  render() {
+    return html` <main id="outlet"></main> `;
+  }
 
   static styles = css`
     :host {
@@ -13,69 +22,6 @@ export class BulletproofLit extends LitElement {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
-      color: #1a2b42;
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: var(--bulletproof-lit-background-color);
-    }
-
-    main {
-      flex-grow: 1;
-    }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
-    }
-
-    .app-footer a {
-      margin-left: 5px;
     }
   `;
-
-  render() {
-    return html`
-      <main>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-        <h1>${this.header}</h1>
-
-        <p>Edit <code>src/BulletproofLit.ts</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
-      </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
-    `;
-  }
 }

@@ -1,6 +1,8 @@
 import presetIcons from '@unocss/preset-icons'
 import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vite'
+import presetUno from '@unocss/preset-uno'
+import presetAttributify from '@unocss/preset-attributify'
 
 export default defineConfig({
   plugins: [
@@ -12,6 +14,8 @@ export default defineConfig({
         { 'cool-green': 'bg-green-500 text-black' },
       ],
       presets: [
+        presetUno(),
+        presetAttributify(),
         presetIcons({
           extraProperties: {
             'display': 'inline-block',

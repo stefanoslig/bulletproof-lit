@@ -16,10 +16,10 @@ export class LandingPage extends LitElement {
       <div flex h-screen items-center bg-white>
         <div mx-auto max-w-7xl px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16>
           <h2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl>
-            <span block>Bulletproof React</span>
+            <span block>Bulletproof Lit</span>
           </h2>
           <img loading="lazy" src="${logo}" alt="lit" />
-          <p>Showcasing Best Practices For Building React Applications</p>
+          <p>Showcasing Best Practices For Building Lit Applications</p>
           <div mt-8 flex justify-center>
             <div inline-flex rounded-md shadow>
               <button-primary .label=${'Get started'}> </button-primary>
@@ -30,6 +30,7 @@ export class LandingPage extends LitElement {
                 target="_blank"
                 rel="noreferrer"
               >
+                <button-primary .label=${'Github repo'}> </button-primary>
               </a>
             </div>
           </div>

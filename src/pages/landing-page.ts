@@ -1,28 +1,31 @@
 import { LitElement, html, css } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
-import '../components/ui/button/button-primary.js';
-import logo from '../assets/open-wc-logo.svg';
+import '../components/ui/button/button.js';
+import logo from '../assets/logo.svg';
 
 @customElement('landing-page')
 export class LandingPage extends LitElement {
   @property({ type: String }) header = 'My app';
 
-  static styles = css`
-    @unocss-placeholder;
-  `;
-
   render() {
     return html`
-      <div flex h-screen items-center bg-white>
+      <div flex items-center bg-white>
         <div mx-auto max-w-7xl px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16>
           <h2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl>
-            <span block>Bulletproof Lit</span>
+            <span block>Bulletproof</span>
           </h2>
           <img loading="lazy" src="${logo}" alt="lit" />
           <p>Showcasing Best Practices For Building Lit Applications</p>
           <div mt-8 flex justify-center>
             <div inline-flex rounded-md shadow>
-              <button-primary .label=${'Get started'}> </button-primary>
+              <bpl-button
+                .icon=${'home'}
+                .variant=${'primary'}
+                .label=${'Get started'}
+              >
+                <span name="icon" class="i-mdi-home text-orange-400"></span>
+                Get started
+              </bpl-button>
             </div>
             <div ml-3 inline-flex>
               <a
@@ -30,7 +33,14 @@ export class LandingPage extends LitElement {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button-primary .label=${'Github repo'}> </button-primary>
+                <bpl-button
+                  .icon=${'github'}
+                  .variant=${'outline'}
+                  .label=${'Github repo'}
+                >
+                  <span name="icon" class="i-mdi-github text-orange-400"></span>
+                  Github repo
+                </bpl-button>
               </a>
             </div>
           </div>
@@ -38,4 +48,8 @@ export class LandingPage extends LitElement {
       </div>
     `;
   }
+
+  static styles = css`
+    @unocss-placeholder;
+  `;
 }

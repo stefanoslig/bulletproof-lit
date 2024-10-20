@@ -19,12 +19,15 @@
   },
   "dependencies": {
     "@lit/task": "1.0.1",
+    "@unocss/preset-attributify": "^0.63.4",
     "@unocss/preset-icons": "^0.63.4",
     "@vaadin/router": "1.7.5",
     "axios": "1.7.7",
-    "lit": "3.1.4"
+    "lit": "3.1.4",
+    "unocss": "^0.63.4"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.2.1",
     "@open-wc/eslint-config": "^12.0.3",
     "@open-wc/testing": "^4.0.0",
     "@storybook/addon-a11y": "8.3.5",
@@ -35,6 +38,7 @@
     "@types/mocha": "^10.0.7",
     "@typescript-eslint/eslint-plugin": "^7.16.0",
     "@typescript-eslint/parser": "^7.16.0",
+    "@unocss/preset-uno": "^0.63.4",
     "@web/storybook-builder": "^0.1.16",
     "@web/storybook-framework-web-components": "^0.1.2",
     "@web/test-runner": "^0.18.2",
@@ -50,7 +54,6 @@
     "storybook": "8.3.5",
     "tslib": "^2.6.3",
     "typescript": "5.5.3",
-    "unocss": "^0.63.4",
     "vite": "5.4.8"
   },
   "eslintConfig": {

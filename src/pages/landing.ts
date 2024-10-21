@@ -1,10 +1,11 @@
 import { LitElement, html, css } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
 import '../components/ui/button/button.js';
+import { Router } from '@vaadin/router';
 import logo from '../assets/logo.svg';
 
-@customElement('landing-page')
-export class LandingPage extends LitElement {
+@customElement('bpl-landing')
+export class BplLanding extends LitElement {
   @property({ type: String }) header = 'My app';
 
   render() {
@@ -19,6 +20,7 @@ export class LandingPage extends LitElement {
           <div mt-8 flex justify-center>
             <div inline-flex rounded-md shadow>
               <bpl-button
+                @click=${() => Router.go('/auth/login')}
                 .icon=${'home'}
                 .variant=${'primary'}
                 .label=${'Get started'}
@@ -29,7 +31,7 @@ export class LandingPage extends LitElement {
             </div>
             <div ml-3 inline-flex>
               <a
-                href="https://github.com/alan2207/bulletproof-react"
+                href="https://github.com/stefanoslig/bulletproof-lit"
                 target="_blank"
                 rel="noreferrer"
               >

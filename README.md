@@ -1,11 +1,11 @@
 # Bulletproof Lit 🛡️ 
-[![MIT License](https://github.com/stefanoslig/bulletproof-lit)](https://github.com/stefanoslig/bulletproof-lit/blob/main/LICENSE)
+[![MIT License](https://github.com/stefanoslig/bulletproof-lit)](https://github.com/stefanoslig/bulletproof-lit/blob/master/LICENSE)
 
 A simple, scalable, and powerful architecture for building production ready Lit applications.
 
 This repository is a migration of [bulletproof-react](https://github.com/alan2207/bulletproof-react) to Lit and its ecosystem.
 
-I'm currently in the early stages of working on this project, and it's still a work in progress.
+I'm currently in the early stages of working on this project, and it's still a **work in progress**.
 
 ## Introduction
 

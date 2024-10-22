@@ -1,7 +1,7 @@
 import { css, html, LitElement } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
-import { routes } from './routes.js';
 import { Router } from '@vaadin/router';
+import { routes } from './routes.js';
 
 @customElement('bulletproof-lit')
 export class BulletproofLit extends LitElement {

@@ -1,5 +1,5 @@
 # Bulletproof Lit 🛡️ 
-[![MIT License](https://github.com/stefanoslig/bulletproof-lit)](https://github.com/stefanoslig/bulletproof-lit/blob/master/LICENSE)
+[![MIT License](https://github.com/stefanoslig/bulletproof-lit)](https://github.com/stefanoslig/bulletproof-lit/LICENSE)
 
 A simple, scalable, and powerful architecture for building production ready Lit applications.
 

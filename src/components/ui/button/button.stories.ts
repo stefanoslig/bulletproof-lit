@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
+import { action } from '@storybook/addon-actions'; // eslint-disable-line import/no-extraneous-dependencies
 import { html } from 'lit';
 import { BplButton } from './button.js';
 
@@ -8,7 +9,11 @@ const defaultArgs: Partial<BplButton> = {
 };
 
 const render = ({ variant, label }: BplButton) =>
-  html` <bpl-button .variant=${variant} .label=${label}>
+  html` <bpl-button
+    @click=${action('button clicked')}
+    .variant=${variant}
+    .label=${label}
+  >
     Get started
   </bpl-button>`;
 
@@ -27,7 +32,11 @@ export const PrimaryButton: Story = {
 export const PrimaryButtonIcon: Story = {
   args: defaultArgs,
   render: ({ variant, label }) =>
-    html` <bpl-button .variant=${variant} .label=${label}>
+    html` <bpl-button
+      @click=${action('button clicked')}
+      .variant=${variant}
+      .label=${label}
+    >
       <span name="icon">👌</span>
       Get started
     </bpl-button>`,

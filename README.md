@@ -8,7 +8,7 @@ I'm currently in the early stages of working on this project, and it's still a *
 
 ## Introduction
 
-Lit is an excellent tool for building front-end applications using native web components. It has a diverse ecosystem with many great libraries for literally anything you might need. However, being forced to make so many choices can be overwhelming. It is also very flexible, you can write React applications in any way you like, but that flexibility comes with a cost. Since there is no pre-defined architecture that developers can follow, it often leads to a messy, inconsistent, and over-complicated codebase.
+Lit is an excellent tool for building front-end applications using native web components. It has an ecosystem with many great libraries for most of things you might need. However, being forced to make so many choices can be overwhelming. It is also very flexible, you can write Lit applications in any way you like, but that flexibility comes with a cost. Since there is no pre-defined architecture that developers can follow, it often leads to a messy, inconsistent, and over-complicated codebase.
 
 This repo attempts to present a way of creating Lit applications using some of the best tools in the ecosystem with a good project structure that scales very well. 
 

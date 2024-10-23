@@ -13,8 +13,6 @@ export class BplButton extends LitElement {
 
   @property() size: 'sm' | 'md' | 'lg' = 'md';
 
-  @property() icon?: string;
-
   @property({ reflect: true }) variant: 'primary' | 'secondary' | 'outline' =
     'primary';
 

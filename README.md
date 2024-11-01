@@ -1,6 +1,6 @@
 # Bulletproof Lit 🛡️ 
 
-A simple, scalable, and powerful architecture for building production ready Lit applications.
+A simple, scalable, and powerful architecture for building production ready Lit applications .
 
 This repository is a migration of [bulletproof-react](https://github.com/alan2207/bulletproof-react) to Lit and its ecosystem.
 

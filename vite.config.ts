@@ -3,8 +3,14 @@ import UnoCSS from 'unocss/vite';
 import { defineConfig } from 'vite';
 import presetUno from '@unocss/preset-uno';
 import presetAttributify from '@unocss/preset-attributify';
+import { fileURLToPath } from 'url';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
   plugins: [
     UnoCSS({
       mode: 'shadow-dom',

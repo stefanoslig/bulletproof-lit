@@ -20,6 +20,7 @@
   "dependencies": {
     "@lit-labs/signals": "^0.1.1",
     "@lit/task": "1.0.1",
+    "@open-wc/form-control": "^1.0.0",
     "@unocss/preset-attributify": "^0.63.4",
     "@unocss/preset-icons": "^0.63.4",
     "@vaadin/router": "1.7.5",

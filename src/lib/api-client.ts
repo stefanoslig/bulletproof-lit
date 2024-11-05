@@ -1,7 +1,7 @@
 import Axios, { InternalAxiosRequestConfig } from 'axios';
 
 // import { useNotifications } from '@/components/ui/notifications';
-// import { env } from '@/config/env';
+import { API_URL } from '@/config/env';
 import { paths } from '@/config/paths.js';
 
 function authRequestInterceptor(config: InternalAxiosRequestConfig) {
@@ -14,7 +14,7 @@ function authRequestInterceptor(config: InternalAxiosRequestConfig) {
 }
 
 export const api = Axios.create({
-  // baseURL: env.API_URL,
+  baseURL: API_URL,
 });
 
 api.interceptors.request.use(authRequestInterceptor);

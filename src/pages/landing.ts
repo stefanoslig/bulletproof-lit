@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
 import '../components/ui/button/button.js';
 import { Router } from '@vaadin/router';
-import logo from '../assets/logo.svg';
+import logo from '@/assets/logo.svg';
 
 @customElement('bpl-landing')
 export class BplLanding extends LitElement {

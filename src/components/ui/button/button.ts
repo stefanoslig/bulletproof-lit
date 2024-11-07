@@ -5,6 +5,15 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 
 @customElement('bpl-button')
 export class BplButton extends LitElement {
+  static readonly formAssociated = true;
+
+  static override readonly shadowRootOptions = {
+    ...LitElement.shadowRootOptions,
+    delegatesFocus: true,
+  };
+
+  internals = this.attachInternals();
+
   @property({ reflect: true, type: Boolean }) disabled = false;
 
   @property({ reflect: true }) type?: 'button' | 'submit' | 'reset';
@@ -52,8 +61,6 @@ export class BplButton extends LitElement {
   }
 
   static styles = css`
-    :host {
-      @unocss-placeholder;
-    }
+    @unocss-placeholder;
   `;
 }

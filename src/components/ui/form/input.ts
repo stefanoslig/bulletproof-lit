@@ -84,8 +84,6 @@ export class BplInput extends FormControlMixin(LitElement) {
   }
 
   static styles = css`
-    :host {
-      @unocss-placeholder;
-    }
+    @unocss-placeholder;
   `;
 }

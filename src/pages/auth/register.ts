@@ -11,8 +11,6 @@ export class BplRegister extends LitElement {
   }
 
   static styles = css`
-    :host {
-      @unocss-placeholder;
-    }
+    @unocss-placeholder;
   `;
 }

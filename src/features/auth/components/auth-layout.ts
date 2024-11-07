@@ -14,12 +14,12 @@ export class BplAuthLayout extends LitElement {
     >
       <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <div class="flex justify-center">
-          <a
+          <img
             @click=${() => Router.go('/')}
-            class="flex items-center text-white"
-          >
-            <img loading="lazy" src="${logo}" alt="lit" />
-          </a>
+            loading="lazy"
+            src="${logo}"
+            alt="lit"
+          />
         </div>
         <h2 class="mt-3 text-center text-3xl font-extrabold text-gray-900">
           ${this.title}
@@ -28,7 +28,6 @@ export class BplAuthLayout extends LitElement {
 
       <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <!-- nested login/register routes -->
           <slot></slot>
         </div>
       </div>
@@ -36,8 +35,6 @@ export class BplAuthLayout extends LitElement {
   }
 
   static styles = css`
-    :host {
-      @unocss-placeholder;
-    }
+    @unocss-placeholder;
   `;
 }

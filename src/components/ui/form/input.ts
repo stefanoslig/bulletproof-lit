@@ -7,6 +7,7 @@ import {
   patternValidator,
   requiredValidator,
 } from '@open-wc/form-control';
+
 import { ifDefined } from 'lit/directives/if-defined.js';
 
 export type InputType =
@@ -21,7 +22,7 @@ export type InputType =
 
 @customElement('bpl-input')
 export class BplInput extends FormControlMixin(LitElement) {
-  static formControlValidator = [requiredValidator, patternValidator];
+  static formControlValidators = [requiredValidator, patternValidator];
 
   @property({ type: Boolean, reflect: true })
   public required = false;
@@ -61,7 +62,6 @@ export class BplInput extends FormControlMixin(LitElement) {
         pattern=${ifDefined(this.pattern)}
         aria-describedby="error-text"
         aria-required="${this.required}"
-        aria-describedby="${ifDefined(this.validationMessage)}"
         class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
       />
       <span class="text-sm font-semibold text-red-500" id="error-text"

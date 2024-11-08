@@ -4,6 +4,8 @@ import '@/features/auth/components/auth-layout.js';
 import '@/components/ui/form/input.js';
 import '@/components/ui/button/button.js';
 import { formValues } from '@open-wc/form-helpers';
+import { Router } from '@vaadin/router';
+import { login, LoginCredentialsDTO } from '@/features/auth/api/login.js';
 
 @customElement('bpl-login')
 export class BplLogin extends LitElement {
@@ -36,9 +38,10 @@ export class BplLogin extends LitElement {
     </bpl-auth-layout>`;
   }
 
-  formSubmit(e: SubmitEvent) {
+  async formSubmit(e: SubmitEvent) {
     e.preventDefault();
-    console.log(formValues(this.form));
+    await login(formValues(this.form) as LoginCredentialsDTO);
+    Router.go('/');
   }
 
   static styles = css`
